@@ -1,15 +1,32 @@
 import HomePage from "./pages/HomePage";
-import UsersListPage, { loadData } from "./pages/UsersListPage";
+import UsersListPage from "./pages/UsersListPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import App from "./App";
+import AdminsListPage from "./pages/AdminsListPage";
 
 export default [
   {
-    ...HomePage,
-    path: "/",
-    exact: true,
-  },
-  {
-    ...UsersListPage,
-    path: "/users",
-    exact: true,
+    ...App,
+    routes: [
+      {
+        ...HomePage,
+        path: "/",
+        exact: true,
+      },
+      {
+        ...UsersListPage,
+        path: "/users",
+        exact: true,
+      },
+      {
+        ...AdminsListPage,
+        path: "/admins",
+        exact: true,
+      },
+      {
+        ...NotFoundPage,
+        path: "",
+      },
+    ],
   },
 ];

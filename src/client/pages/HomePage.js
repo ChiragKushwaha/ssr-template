@@ -2,10 +2,10 @@ import React from "react";
 
 const Home = () => {
   return (
-    <React.Fragment>
-      <div>I'm the home done by Chirag</div>
-      <button onClick={() => console.log("Hi there")}>Press me!</button>
-    </React.Fragment>
+    <div className="center-align" style={{ marginTop: "200px" }}>
+      <h3>Welcome to SSR</h3>
+      <p>Check out these awesome features</p>
+    </div>
   );
 };
 
